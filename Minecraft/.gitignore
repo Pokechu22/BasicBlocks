@@ -13,6 +13,7 @@
 
 *.bat
 *.sh
+
 /bin/
 /.gradle/
 /.metadata/
@@ -20,3 +21,7 @@
 /build/
 /eclipse/
 /.classpath
+/options.txt
+/logs/
+/config/
+/saves/
