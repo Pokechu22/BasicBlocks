@@ -7,6 +7,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid="BasicBlocks", name="Basic Blocks for Simple Modeling", version="0.0.0")
 public class BasicBlocks {
@@ -25,6 +26,8 @@ public class BasicBlocks {
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
+
+		GameRegistry.registerBlock(BlockList.genericDirt, "genericDirt");
 	}
 
 	@EventHandler
