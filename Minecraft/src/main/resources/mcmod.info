@@ -1,0 +1,18 @@
+[
+{
+  "modid": "BasicBlocks",
+  "name": "Basic Blocks for Simple Modeling",
+  "description": 
+"Mod that creates a set of basic blocks for use in modeling 
+some basic stuff.  ",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Pokechu22"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
