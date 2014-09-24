@@ -135,10 +135,10 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 		//Side.
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
 		//Slant
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
