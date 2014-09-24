@@ -34,7 +34,10 @@ public class BasicBlocks {
 		proxy.registerRenderers();
 
 		GameRegistry.registerBlock(BlockList.genericDirt, "genericDirt");
-		GameRegistry.registerBlock(BlockList.test, "test");
+		GameRegistry.registerBlock(BlockList.slopeNorth, "slopeNorth");
+		GameRegistry.registerBlock(BlockList.slopeEast, "slopeEast");
+		GameRegistry.registerBlock(BlockList.slopeSouth, "slopeSouth");
+		GameRegistry.registerBlock(BlockList.slopeWest, "slopeWest");
 	}
 
 	@EventHandler
