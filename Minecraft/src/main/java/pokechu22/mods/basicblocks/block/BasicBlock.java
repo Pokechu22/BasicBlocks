@@ -1,4 +1,4 @@
-package pokechu22.mods.basicblocks;
+package pokechu22.mods.basicblocks.block;
 
 import pokechu22.mods.basicblocks.client.SimpleBlockRenderer;
 
