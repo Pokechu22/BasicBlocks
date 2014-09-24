@@ -9,6 +9,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenderers() {
 		// This is for rendering entities and so forth later on
+		RenderingRegistry.registerBlockHandler(new BasicRenderer(RenderingRegistry.getNextAvailableRenderId()));
 		RenderingRegistry.registerBlockHandler(new SlopeRenderer(RenderingRegistry.getNextAvailableRenderId()));
 	}
 
