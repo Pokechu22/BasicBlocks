@@ -26,14 +26,14 @@ public class BlockList {
 			.setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks);
 	public final static Block slopeNorth = new BlockSlope(Material.iron, SlopeType.NORTH)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeNorth");
+			.setBlockName("slopeNorth").setBlockTextureName("basicblocks:BaseTexture");
 	public final static Block slopeEast = new BlockSlope(Material.iron, SlopeType.EAST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeEast");
+			.setBlockName("slopeEast").setBlockTextureName("basicblocks:BaseTexture");
 	public final static Block slopeSouth = new BlockSlope(Material.iron, SlopeType.SOUTH)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeSouth");
+			.setBlockName("slopeSouth").setBlockTextureName("basicblocks:BaseTexture");
 	public final static Block slopeWest = new BlockSlope(Material.iron, SlopeType.WEST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeWest");
+			.setBlockName("slopeWest").setBlockTextureName("basicblocks:BaseTexture");
 }
