@@ -1,5 +1,11 @@
 tile.baseBlock.name=Basic Block
+
 tile.slopeNorth.name=Basic Slope (North)
 tile.slopeEast.name=Basic Slope (East)
 tile.slopeSouth.name=Basic Slope (South)
 tile.slopeWest.name=Basic Slope (West)
+
+tile.cornerNorthEast.name=Basic Corner (NorthEast)
+tile.cornerNorthWest.name=Basic Corner (NorthWest)
+tile.cornerSouthEast.name=Basic Corner (SouthEast)
+tile.cornerSouthWest.name=Basic Corner (SouthWest)

@@ -38,6 +38,10 @@ public class BasicBlocks {
 		GameRegistry.registerBlock(BlockList.slopeEast, "slopeEast");
 		GameRegistry.registerBlock(BlockList.slopeSouth, "slopeSouth");
 		GameRegistry.registerBlock(BlockList.slopeWest, "slopeWest");
+		GameRegistry.registerBlock(BlockList.cornerNorthEast, "cornerNorthEast");
+		GameRegistry.registerBlock(BlockList.cornerNorthWest, "cornerNorthWest");
+		GameRegistry.registerBlock(BlockList.cornerSouthEast, "cornerSouthEast");
+		GameRegistry.registerBlock(BlockList.cornerSouthWest, "cornerSouthWest");
 	}
 
 	@EventHandler
