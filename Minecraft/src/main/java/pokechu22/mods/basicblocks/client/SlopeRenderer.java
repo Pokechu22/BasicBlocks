@@ -168,25 +168,25 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		//Back.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
-		//Slant
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		//Side.
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, maxV);
+		//Side.
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
+		//Slant
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 	}
 	
 	public void renderWest(IBlockAccess world, int x, int y, int z,
