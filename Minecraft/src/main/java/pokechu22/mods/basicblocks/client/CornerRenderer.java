@@ -79,6 +79,13 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		return false;
 	}
 	
+	/*
+	 * South: Z increasing
+	 * East: X increasing.
+	 * North: Z decreasing
+	 * West: X decreasing 
+	 */
+	
 	public void renderNorthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockCorner block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
@@ -88,6 +95,14 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
+		
+		//North
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//East
+		
 	}
 	
 	public void renderNorthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -99,6 +114,17 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
+		
+		//North
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		//West TODO this doesn't work.
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 	}
 	
 	public void renderSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -110,6 +136,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
+		
+		//South
+		
+		//East
+		
 	}
 	
 	public void renderSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -121,6 +152,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
+		
+		//South
+		
+		//West
+		
 	}
 
 	@Override
