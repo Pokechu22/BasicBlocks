@@ -206,30 +206,30 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
 		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 		//Back.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
-		//Slant
 		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		//Side.
+		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		//Side.
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
+		//Slant
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
 	}
 
 	@Override
