@@ -120,11 +120,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		//West TODO this doesn't work.
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
+		//West
 		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
 	}
 	
 	public void renderSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -156,7 +156,10 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		//South
 		
 		//West
-		
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
 	}
 
 	@Override
