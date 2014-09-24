@@ -98,19 +98,19 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		
 		//North
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + .5, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
 		//East
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .5, y + .5, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
 		//Top.
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
 		
 	}
 	
@@ -126,19 +126,19 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		
 		//North
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		//West
 		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		//Top.
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 	}
 	
 	public void renderSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -153,19 +153,19 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		
 		//South
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
 		//East
 		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
 		//Top
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
 	}
 	
 	public void renderSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -180,19 +180,19 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		
 		//South
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + .5, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		//West
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + .5, y + .5, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, maxV);
 		//Top
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 	}
 
 	@Override
