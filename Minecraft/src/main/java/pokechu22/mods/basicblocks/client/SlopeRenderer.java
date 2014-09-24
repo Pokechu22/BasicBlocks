@@ -242,4 +242,5 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 	public int getRenderId() {
 		// TODO Auto-generated method stub
 		return renderId;
-	}}
+	}
+}
