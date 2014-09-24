@@ -1,3 +1,4 @@
+tile.baseBlock.name=Basic Block
 tile.slopeNorth.name=Basic Slope (North)
 tile.slopeEast.name=Basic Slope (East)
 tile.slopeSouth.name=Basic Slope (South)

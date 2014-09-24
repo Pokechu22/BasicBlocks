@@ -22,18 +22,24 @@ public class BlockList {
 		}
 	};
 	
-	public final static Block genericDirt = new BasicBlock(Material.iron).setHardness(1)
-			.setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks);
+	public final static Block baseBlock = new BasicBlock(Material.iron).setHardness(1)
+			.setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("baseBlock").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(15);
 	public final static Block slopeNorth = new BlockSlope(Material.iron, SlopeType.NORTH)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeNorth").setBlockTextureName("basicblocks:BaseTexture");
+			.setBlockName("slopeNorth").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(15);
 	public final static Block slopeEast = new BlockSlope(Material.iron, SlopeType.EAST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeEast").setBlockTextureName("basicblocks:BaseTexture");
+			.setBlockName("slopeEast").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(15);
 	public final static Block slopeSouth = new BlockSlope(Material.iron, SlopeType.SOUTH)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeSouth").setBlockTextureName("basicblocks:BaseTexture");
+			.setBlockName("slopeSouth").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(15);
 	public final static Block slopeWest = new BlockSlope(Material.iron, SlopeType.WEST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-			.setBlockName("slopeWest").setBlockTextureName("basicblocks:BaseTexture");
+			.setBlockName("slopeWest").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(15);
 }

@@ -33,7 +33,7 @@ public class BasicBlocks {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 
-		GameRegistry.registerBlock(BlockList.genericDirt, "genericDirt");
+		GameRegistry.registerBlock(BlockList.baseBlock, "genericDirt");
 		GameRegistry.registerBlock(BlockList.slopeNorth, "slopeNorth");
 		GameRegistry.registerBlock(BlockList.slopeEast, "slopeEast");
 		GameRegistry.registerBlock(BlockList.slopeSouth, "slopeSouth");
