@@ -53,12 +53,6 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
 		
-		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		
 		switch (corner.type) {
 		case NORTH_EAST:
 			renderNorthEast(t, world, x, y, z, corner, modelId, renderer);
@@ -96,6 +90,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 		
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		//South
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
@@ -124,6 +123,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 		
+		//Bottom
+		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		//South
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
 		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
@@ -151,6 +155,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 		
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		//North
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, maxV);
@@ -178,6 +187,11 @@ public class CornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 		
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
 		//North
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
