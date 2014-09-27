@@ -9,3 +9,8 @@ tile.cornerNorthEast.name=Basic Corner (NorthEast)
 tile.cornerNorthWest.name=Basic Corner (NorthWest)
 tile.cornerSouthEast.name=Basic Corner (SouthEast)
 tile.cornerSouthWest.name=Basic Corner (SouthWest)
+
+tile.innerCornerNorthEast.name=Basic Inner Corner (NorthEast)
+tile.innerCornerNorthWest.name=Basic Inner Corner (NorthWest)
+tile.innerCornerSouthEast.name=Basic Inner Corner (SouthEast)
+tile.innerCornerSouthWest.name=Basic Inner Corner (SouthWest)

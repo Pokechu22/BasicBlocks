@@ -43,20 +43,36 @@ public class BlockList {
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("slopeWest").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
-	public final static Block cornerNorthEast = new BlockCorner(Material.iron, CornerType.NORTH_EAST)
+	public final static Block cornerNorthEast = new BlockCorner(Material.iron, BlockCorner.CornerType.NORTH_EAST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("cornerNorthEast").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
-	public final static Block cornerNorthWest = new BlockCorner(Material.iron, CornerType.NORTH_WEST)
+	public final static Block cornerNorthWest = new BlockCorner(Material.iron, BlockCorner.CornerType.NORTH_WEST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("cornerNorthWest").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
-	public final static Block cornerSouthEast = new BlockCorner(Material.iron, CornerType.SOUTH_EAST)
+	public final static Block cornerSouthEast = new BlockCorner(Material.iron, BlockCorner.CornerType.SOUTH_EAST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("cornerSouthEast").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
-	public final static Block cornerSouthWest = new BlockCorner(Material.iron, CornerType.SOUTH_WEST)
+	public final static Block cornerSouthWest = new BlockCorner(Material.iron, BlockCorner.CornerType.SOUTH_WEST)
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("cornerSouthWest").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
+	public final static Block innerCornerNorthEast = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.NORTH_EAST)
+		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+		.setBlockName("innerCornerNorthEast").setBlockTextureName("basicblocks:BaseTexture")
+		.setLightLevel(1);
+	public final static Block innerCornerNorthWest = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.NORTH_WEST)
+		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+		.setBlockName("innerCornerNorthWest").setBlockTextureName("basicblocks:BaseTexture")
+		.setLightLevel(1);
+	public final static Block innerCornerSouthEast = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.SOUTH_EAST)
+		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+		.setBlockName("innerCornerSouthEast").setBlockTextureName("basicblocks:BaseTexture")
+		.setLightLevel(1);
+	public final static Block innerCornerSouthWest = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.SOUTH_WEST)
+		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+		.setBlockName("innerCornerSouthWest").setBlockTextureName("basicblocks:BaseTexture")
+		.setLightLevel(1);
 }
