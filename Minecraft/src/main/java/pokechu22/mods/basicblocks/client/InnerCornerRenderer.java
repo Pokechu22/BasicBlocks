@@ -110,11 +110,6 @@ public class InnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
-		//Slope.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 1, z + .5, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
 		//South
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
@@ -125,6 +120,11 @@ public class InnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		//Slope
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + .5, y + 1, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
 	}
 	
 	public void renderSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -152,11 +152,6 @@ public class InnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
 		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
-		//Top.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
 		//North
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
@@ -167,6 +162,11 @@ public class InnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		//Slope
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 1, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
 	}
 	
 	public void renderNorthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
