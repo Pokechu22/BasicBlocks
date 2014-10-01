@@ -56,6 +56,7 @@ public class InnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		
 		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
+		t.setBrightness(lightValue);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
 		
 		switch (corner.type) {
