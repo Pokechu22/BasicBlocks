@@ -51,20 +51,9 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		
 		Tessellator t = Tessellator.instance;
 		
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		
 		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
 		t.setBrightness(lightValue);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
-		
-		//Bottom
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 		
 		switch (slope.type) {
 		case UPPER_NORTH:
@@ -100,42 +89,114 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 	
 	public void renderUpperNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
 	}
 	
 	public void renderUpperEast(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
 	}
 	
 	public void renderUpperSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
 	}
 	
 	public void renderUpperWest(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
 	}
 	
 	public void renderLowerNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 	}
 	
 	public void renderLowerEast(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 	}
 	
 	public void renderLowerSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 	}
 	
 	public void renderLowerWest(Tessellator t, IBlockAccess world, int x, int y, int z,
 			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 	}
 	
 	@Override
