@@ -1,6 +1,6 @@
 package pokechu22.mods.basicblocks.block;
 
-import pokechu22.mods.basicblocks.client.SlopeRenderer;
+import pokechu22.mods.basicblocks.client.SteepSlopeRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -27,6 +27,6 @@ public class BlockSteepSlope extends Block {
 
 	@Override
 	public int getRenderType() {
-		return SlopeRenderer.usedRenderId;
+		return SteepSlopeRenderer.usedRenderId;
 	}
 }
