@@ -102,6 +102,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 0, z + .5, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + .5, minU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//Back. (South)
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
 	}
 	
 	public void renderUpperEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -119,6 +124,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + .5, y + 0, z + 1, minU, maxV);
 		t.addVertexWithUV(x + .5, y + 0, z + 0, minU, minV);
+		//Back. (West)
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
 	}
 	
 	public void renderUpperSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -136,6 +146,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + .5, minU, minV);
+		//Back. (North)
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 	}
 	
 	public void renderUpperWest(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -153,6 +168,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//Back. (East)
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
 	}
 	
 	public void renderLowerNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -175,6 +195,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 1, z + .5, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + .5, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		//Back. (South)
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
 	}
 	
 	public void renderLowerEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -197,6 +222,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + .5, y + 1, z + 1, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		//Back. (West)
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
 	}
 	
 	public void renderLowerSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -219,6 +249,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + .5, maxU, minV);
+		//Back. (North)
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 	}
 	
 	public void renderLowerWest(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -241,6 +276,11 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
 		t.addVertexWithUV(x + .5, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + .5, y + 1, z + 0, maxU, minV);
+		//Back. (East)
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
 	}
 	
 	@Override
