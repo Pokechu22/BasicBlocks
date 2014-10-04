@@ -14,3 +14,13 @@ tile.innerCornerNorthEast.name=Basic Inner Corner (NorthEast)
 tile.innerCornerNorthWest.name=Basic Inner Corner (NorthWest)
 tile.innerCornerSouthEast.name=Basic Inner Corner (SouthEast)
 tile.innerCornerSouthWest.name=Basic Inner Corner (SouthWest)
+
+tile.steepSlopeNorthLower.name=Steep Slope (North, lower)
+tile.steepSlopeEastLower.name=Steep Slope (East, lower) 
+tile.steepSlopeSouthLower.name=Steep Slope (South, lower)
+tile.steepSlopeWestLower.name=Steep Slope (West, lower)
+
+tile.steepSlopeNorthUpper.name=Steep Slope (North, upper)
+tile.steepSlopeEastUpper.name=Steep Slope (East, upper) 
+tile.steepSlopeSouthUpper.name=Steep Slope (South, upper)
+tile.steepSlopeWestUpper.name=Steep Slope (West, upper)
