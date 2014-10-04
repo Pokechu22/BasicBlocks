@@ -1,6 +1,7 @@
 package pokechu22.mods.basicblocks.client;
 
-import pokechu22.mods.basicblocks.block.BlockSlope;
+import pokechu22.mods.basicblocks.block.BlockInnerCorner;
+import pokechu22.mods.basicblocks.block.BlockSteepSlope;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -34,204 +35,109 @@ public class SteepSlopeRenderer implements ISimpleBlockRenderingHandler {
 	@Override
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
 			Block block, int modelId, RenderBlocks renderer) {
-		if (!(block instanceof BlockSlope)) {
+		if (!(block instanceof BlockSteepSlope)) {
 			return false;
 		}
 		
-		BlockSlope slope = (BlockSlope) block;
+		BlockSteepSlope slope = (BlockSteepSlope) block;
+		
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+		
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+		Tessellator t = Tessellator.instance;
+		
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		
+		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
+		t.setBrightness(lightValue);
+		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
+		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 		
 		switch (slope.type) {
-		case NORTH:
-			renderNorth(world, x, y, z, slope, modelId, renderer);
+		case UPPER_NORTH:
+			renderUpperNorth(t, world, x, y, z, slope, modelId, renderer);
 			break;
-		case EAST:
-			renderEast(world, x, y, z, slope, modelId, renderer);
+		case UPPER_EAST:
+			renderUpperEast(t, world, x, y, z, slope, modelId, renderer);
 			break;
-		case SOUTH:
-			renderSouth(world, x, y, z, slope, modelId, renderer);
+		case UPPER_SOUTH:
+			renderUpperSouth(t, world, x, y, z, slope, modelId, renderer);
 			break;
-		case WEST:
-			renderWest(world, x, y, z, slope, modelId, renderer);
+		case UPPER_WEST:
+			renderUpperWest(t, world, x, y, z, slope, modelId, renderer);
+			break;
+		case LOWER_NORTH:
+			renderLowerNorth(t, world, x, y, z, slope, modelId, renderer);
+			break;
+		case LOWER_EAST:
+			renderLowerEast(t, world, x, y, z, slope, modelId, renderer);
+			break;
+		case LOWER_SOUTH:
+			renderLowerSouth(t, world, x, y, z, slope, modelId, renderer);
+			break;
+		case LOWER_WEST:
+			renderLowerWest(t, world, x, y, z, slope, modelId, renderer);
 			break;
 		default:
 			break;
-		}
 		
+		}
 		return true;
 	}
 	
-	public void renderNorth(IBlockAccess world, int x, int y, int z,
-			BlockSlope block, int modelId, RenderBlocks renderer) {
-		IIcon ironIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	public void renderUpperNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
 		
-		float minU = ironIcon.getMinU();
-		float minV = ironIcon.getMinV();
-		float maxU = ironIcon.getMaxU();
-		float maxV = ironIcon.getMaxV();
-		
-		BlockSlope s = (BlockSlope) block;
-		
-		Tessellator t = Tessellator.instance;
-		
-		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
-		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
-		//Bottom
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		//Back.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
-		//Slant
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
 	}
 	
-	public void renderEast(IBlockAccess world, int x, int y, int z,
-			BlockSlope block, int modelId, RenderBlocks renderer) {
-		IIcon ironIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	public void renderUpperEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
 		
-		float minU = ironIcon.getMinU();
-		float minV = ironIcon.getMinV();
-		float maxU = ironIcon.getMaxU();
-		float maxV = ironIcon.getMaxV();
-		
-		BlockSlope s = (BlockSlope) block;
-		
-		Tessellator t = Tessellator.instance;
-		
-		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
-		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
-		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		//Back.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
-		//Slant
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
 	}
 	
-	public void renderSouth(IBlockAccess world, int x, int y, int z,
-			BlockSlope block, int modelId, RenderBlocks renderer) {
-		IIcon ironIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	public void renderUpperSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
 		
-		float minU = ironIcon.getMinU();
-		float minV = ironIcon.getMinV();
-		float maxU = ironIcon.getMaxU();
-		float maxV = ironIcon.getMaxV();
-		
-		BlockSlope s = (BlockSlope) block;
-		
-		Tessellator t = Tessellator.instance;
-		
-		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
-		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
-		//Bottom
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		//Back.
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
-		//Slant
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 	}
 	
-	public void renderWest(IBlockAccess world, int x, int y, int z,
-			BlockSlope block, int modelId, RenderBlocks renderer) {
-		IIcon ironIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	public void renderUpperWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
 		
-		float minU = ironIcon.getMinU();
-		float minV = ironIcon.getMinV();
-		float maxU = ironIcon.getMaxU();
-		float maxV = ironIcon.getMaxV();
-		
-		BlockSlope s = (BlockSlope) block;
-		
-		Tessellator t = Tessellator.instance;
-		
-		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
-		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
-		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		//Back.
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, maxV);
-		//Side.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
-		//Slant
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
 	}
-
+	
+	public void renderLowerNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		
+	}
+	
+	public void renderLowerEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		
+	}
+	
+	public void renderLowerSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		
+	}
+	
+	public void renderLowerWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+		
+	}
+	
 	@Override
 	public boolean shouldRender3DInInventory(int modelId) {
 		// TODO Auto-generated method stub
