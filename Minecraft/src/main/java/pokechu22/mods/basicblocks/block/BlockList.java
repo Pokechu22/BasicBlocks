@@ -60,19 +60,52 @@ public class BlockList {
 			.setBlockName("cornerSouthWest").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
 	public final static Block innerCornerNorthEast = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.NORTH_EAST)
-		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-		.setBlockName("innerCornerNorthEast").setBlockTextureName("basicblocks:BaseTexture")
-		.setLightLevel(1);
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("innerCornerNorthEast").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 	public final static Block innerCornerNorthWest = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.NORTH_WEST)
-		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-		.setBlockName("innerCornerNorthWest").setBlockTextureName("basicblocks:BaseTexture")
-		.setLightLevel(1);
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("innerCornerNorthWest").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 	public final static Block innerCornerSouthEast = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.SOUTH_EAST)
-		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-		.setBlockName("innerCornerSouthEast").setBlockTextureName("basicblocks:BaseTexture")
-		.setLightLevel(1);
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("innerCornerSouthEast").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 	public final static Block innerCornerSouthWest = new BlockInnerCorner(Material.iron, BlockInnerCorner.CornerType.SOUTH_WEST)
-		.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
-		.setBlockName("innerCornerSouthWest").setBlockTextureName("basicblocks:BaseTexture")
-		.setLightLevel(1);
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("innerCornerSouthWest").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	//Steep slopes.
+	public final static Block steepSlopeNorthUpper = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.UPPER_NORTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeNorthUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeEastUpper = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.UPPER_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeSouthUpper = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.UPPER_SOUTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeSouthUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeWestUpper = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.UPPER_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeNorthLower = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.LOWER_NORTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeNorthLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeEastLower = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.LOWER_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeSouthLower  = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.LOWER_SOUTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeSouthLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepSlopeWestLower = new BlockSteepSlope(Material.iron, BlockSteepSlope.SlopeType.LOWER_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepSlopeWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 }

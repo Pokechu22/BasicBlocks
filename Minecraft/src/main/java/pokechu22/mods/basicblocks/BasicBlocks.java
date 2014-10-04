@@ -34,18 +34,30 @@ public class BasicBlocks {
 		proxy.registerRenderers();
 
 		GameRegistry.registerBlock(BlockList.baseBlock, "genericDirt");
+		//Slopes
 		GameRegistry.registerBlock(BlockList.slopeNorth, "slopeNorth");
 		GameRegistry.registerBlock(BlockList.slopeEast, "slopeEast");
 		GameRegistry.registerBlock(BlockList.slopeSouth, "slopeSouth");
 		GameRegistry.registerBlock(BlockList.slopeWest, "slopeWest");
+		//Outer corners
 		GameRegistry.registerBlock(BlockList.cornerNorthEast, "cornerNorthEast");
 		GameRegistry.registerBlock(BlockList.cornerNorthWest, "cornerNorthWest");
 		GameRegistry.registerBlock(BlockList.cornerSouthEast, "cornerSouthEast");
 		GameRegistry.registerBlock(BlockList.cornerSouthWest, "cornerSouthWest");
+		//Inner corners
 		GameRegistry.registerBlock(BlockList.innerCornerNorthEast, "innerCornerNorthEast");
 		GameRegistry.registerBlock(BlockList.innerCornerNorthWest, "innerCornerNorthWest");
 		GameRegistry.registerBlock(BlockList.innerCornerSouthEast, "innerCornerSouthEast");
 		GameRegistry.registerBlock(BlockList.innerCornerSouthWest, "innerCornerSouthWest");
+		//Steep slopes
+		GameRegistry.registerBlock(BlockList.steepSlopeNorthUpper, "steepSlopeNorthUpper");
+		GameRegistry.registerBlock(BlockList.steepSlopeEastUpper, "steepSlopeEastUpper");
+		GameRegistry.registerBlock(BlockList.steepSlopeSouthUpper, "steepSlopeSouthUpper");
+		GameRegistry.registerBlock(BlockList.steepSlopeWestUpper, "steepSlopeWestUpper");
+		GameRegistry.registerBlock(BlockList.steepSlopeNorthLower, "steepSlopeNorthLower");
+		GameRegistry.registerBlock(BlockList.steepSlopeEastLower, "steepSlopeEastLower");
+		GameRegistry.registerBlock(BlockList.steepSlopeSouthLower, "steepSlopeSouthLower");
+		GameRegistry.registerBlock(BlockList.steepSlopeWestLower, "steepSlopeWestLower");
 	}
 
 	@EventHandler
