@@ -1,5 +1,7 @@
 package pokechu22.mods.basicblocks.block;
 
+import java.util.Locale;
+
 import pokechu22.mods.basicblocks.client.SlopeRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,5 +26,10 @@ public class BlockSlope extends Block {
 	@Override
 	public int getRenderType() {
 		return SlopeRenderer.usedRenderId;
+	}
+	
+	@Override
+	public String getItemIconName() {
+		return "basicblocks:slope_" + this.type.name().toLowerCase(Locale.ENGLISH);
 	}
 }
