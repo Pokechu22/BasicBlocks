@@ -1,7 +1,7 @@
 package pokechu22.mods.basicblocks.client;
 
 import pokechu22.mods.basicblocks.block.BlockInnerCorner;
-import pokechu22.mods.basicblocks.block.BlockSteepSlope;
+import pokechu22.mods.basicblocks.block.BlockShallowSlope;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -35,11 +35,11 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	@Override
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
 			Block block, int modelId, RenderBlocks renderer) {
-		if (!(block instanceof BlockSteepSlope)) {
+		if (!(block instanceof BlockShallowSlope)) {
 			return false;
 		}
 		
-		BlockSteepSlope slope = (BlockSteepSlope) block;
+		BlockShallowSlope slope = (BlockShallowSlope) block;
 		
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
@@ -88,7 +88,7 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderUpperNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -125,7 +125,7 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderUpperEast(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -162,7 +162,7 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderUpperSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -199,44 +199,49 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderUpperWest(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
-		
+	
 		float minU = icon.getMinU();
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
-		
-		//Bottom
-		t.addVertexWithUV(x + .5, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		//Back. (East)
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
-		//Side. (North)
-		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		//Side. (South)
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + 0, maxU, minV);
-		//Slope
-		t.addVertexWithUV(x + .5, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + 1, minU, maxV);
-	}
 	
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
+		//Top
+		t.addVertexWithUV(x + 1, y + .5, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + .5, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		//Back. (East)
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		//Side. (North)
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		//Side. (South)
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + .5, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//Slope
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+	}
+
 	public void renderLowerNorth(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -278,7 +283,7 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderLowerEast(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -320,7 +325,7 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderLowerSouth(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
@@ -362,47 +367,42 @@ public class ShallowSlopeRenderer implements ISimpleBlockRenderingHandler {
 	}
 	
 	public void renderLowerWest(Tessellator t, IBlockAccess world, int x, int y, int z,
-			BlockSteepSlope block, int modelId, RenderBlocks renderer) {
+			BlockShallowSlope block, int modelId, RenderBlocks renderer) {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
-		
+	
 		float minU = icon.getMinU();
 		float minV = icon.getMinV();
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
-		
-		//Bottom
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		//Top
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + 1, z + 0, maxU, minV);
-		//Back. (East)
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
-		//Side. (North)
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + .5, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		//Side. (South)
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 1, z + 0, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		//Slope
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + .5, y + 1, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-	}
 	
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + 0, maxU, minV);
+		//Back. (East)
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		//Side. (North)
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + 1, maxU, minV);
+		//Side. (South)
+		t.addVertexWithUV(x + 0, y + .5, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//Slope
+		t.addVertexWithUV(x + 0, y + .5, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + .5, z + 0, minU, minV);
+	}
+
 	@Override
 	public boolean shouldRender3DInInventory(int modelId) {
 		// TODO Auto-generated method stub
