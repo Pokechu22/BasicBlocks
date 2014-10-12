@@ -1,3 +1,5 @@
+itemGroup.basicBlocksModTab=Basic Blocks
+
 tile.baseBlock.name=Basic Block
 
 tile.slopeNorth.name=Basic Slope (North)
@@ -24,3 +26,13 @@ tile.steepSlopeNorthUpper.name=Steep Slope (North, upper)
 tile.steepSlopeEastUpper.name=Steep Slope (East, upper) 
 tile.steepSlopeSouthUpper.name=Steep Slope (South, upper)
 tile.steepSlopeWestUpper.name=Steep Slope (West, upper)
+
+tile.shallowSlopeNorthLower.name=Shallow Slope (North, lower)
+tile.shallowSlopeEastLower.name=Shallow Slope (East, lower) 
+tile.shallowSlopeSouthLower.name=Shallow Slope (South, lower)
+tile.shallowSlopeWestLower.name=Shallow Slope (West, lower)
+
+tile.shallowSlopeNorthUpper.name=Shallow Slope (North, upper)
+tile.shallowSlopeEastUpper.name=Shallow Slope (East, upper) 
+tile.shallowSlopeSouthUpper.name=Shallow Slope (South, upper)
+tile.shallowSlopeWestUpper.name=Shallow Slope (West, upper)
