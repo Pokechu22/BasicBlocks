@@ -1,5 +1,7 @@
 package pokechu22.mods.basicblocks.block;
 
+import java.util.Locale;
+
 import pokechu22.mods.basicblocks.client.InnerCornerRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,5 +26,10 @@ public class BlockInnerCorner extends Block {
 	@Override
 	public int getRenderType() {
 		return InnerCornerRenderer.usedRenderId;
+	}
+	
+	@Override
+	public String getItemIconName() {
+		return "basicblocks:inner_corner_" + this.type.name().toLowerCase(Locale.ENGLISH);
 	}
 }
