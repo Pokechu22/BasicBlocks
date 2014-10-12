@@ -58,6 +58,15 @@ public class BasicBlocks {
 		GameRegistry.registerBlock(BlockList.steepSlopeEastLower, "steepSlopeEastLower");
 		GameRegistry.registerBlock(BlockList.steepSlopeSouthLower, "steepSlopeSouthLower");
 		GameRegistry.registerBlock(BlockList.steepSlopeWestLower, "steepSlopeWestLower");
+		//Shallow slopes
+				GameRegistry.registerBlock(BlockList.shallowSlopeNorthUpper, "shallowSlopeNorthUpper");
+				GameRegistry.registerBlock(BlockList.shallowSlopeEastUpper, "shallowSlopeEastUpper");
+				GameRegistry.registerBlock(BlockList.shallowSlopeSouthUpper, "shallowSlopeSouthUpper");
+				GameRegistry.registerBlock(BlockList.shallowSlopeWestUpper, "shallowSlopeWestUpper");
+				GameRegistry.registerBlock(BlockList.shallowSlopeNorthLower, "shallowSlopeNorthLower");
+				GameRegistry.registerBlock(BlockList.shallowSlopeEastLower, "shallowSlopeEastLower");
+				GameRegistry.registerBlock(BlockList.shallowSlopeSouthLower, "shallowSlopeSouthLower");
+				GameRegistry.registerBlock(BlockList.shallowSlopeWestLower, "shallowSlopeWestLower");
 	}
 
 	@EventHandler

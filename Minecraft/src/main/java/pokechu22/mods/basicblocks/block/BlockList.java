@@ -108,4 +108,37 @@ public class BlockList {
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("steepSlopeWestLower").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
+	//Shallow slopes.
+	public final static Block shallowSlopeNorthUpper = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.UPPER_NORTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeNorthUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeEastUpper = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.UPPER_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeSouthUpper = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.UPPER_SOUTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeSouthUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeWestUpper = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.UPPER_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeNorthLower = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.LOWER_NORTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeNorthLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeEastLower = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.LOWER_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeSouthLower  = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.LOWER_SOUTH)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeSouthLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowSlopeWestLower = new BlockShallowSlope(Material.iron, BlockShallowSlope.SlopeType.LOWER_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowSlopeWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 }
