@@ -2,6 +2,8 @@ itemGroup.basicBlocksModTab=Basic Blocks
 
 tile.baseBlock.name=Basic Block
 
+#Normal
+
 tile.slopeNorth.name=Basic Slope (North)
 tile.slopeEast.name=Basic Slope (East)
 tile.slopeSouth.name=Basic Slope (South)
@@ -16,6 +18,8 @@ tile.innerCornerNorthEast.name=Basic Inner Corner (NorthEast)
 tile.innerCornerNorthWest.name=Basic Inner Corner (NorthWest)
 tile.innerCornerSouthEast.name=Basic Inner Corner (SouthEast)
 tile.innerCornerSouthWest.name=Basic Inner Corner (SouthWest)
+
+#Steep
 
 tile.steepSlopeNorthLower.name=Steep Slope (North, lower)
 tile.steepSlopeEastLower.name=Steep Slope (East, lower) 
@@ -49,6 +53,8 @@ tile.steepInnerCornerNorthEastUpper.name=Steep Inner Corner (NorthEast, Upper)
 tile.steepInnerCornerNorthWestUpper.name=Steep Inner Corner (NorthWest, Upper)
 tile.steepInnerCornerSouthEastUpper.name=Steep Inner Corner (SouthEast, Upper)
 tile.steepInnerCornerSouthWestUpper.name=Steep Inner Corner (SouthWest, Upper)
+
+#Shallow
 
 tile.shallowSlopeNorthLower.name=Shallow Slope (North, lower)
 tile.shallowSlopeEastLower.name=Shallow Slope (East, lower) 
