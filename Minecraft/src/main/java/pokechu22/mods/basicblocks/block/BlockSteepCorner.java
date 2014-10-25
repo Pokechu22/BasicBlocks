@@ -3,6 +3,7 @@ package pokechu22.mods.basicblocks.block;
 import java.util.Locale;
 
 import pokechu22.mods.basicblocks.client.CornerRenderer;
+import pokechu22.mods.basicblocks.client.SteepCornerRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
