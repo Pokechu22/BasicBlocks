@@ -62,29 +62,13 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 	
 	public void renderNorth(IBlockAccess world, int x, int y, int z,
 			BlockSlope block, int modelId, RenderBlocks renderer) {
-		IIcon normalIcon = RenderBlocks.getInstance()
+		IIcon ironIcon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
-		float minUNorm = normalIcon.getMinU();
-		float minVNorm = normalIcon.getMinV();
-		float maxUNorm = normalIcon.getMaxU();
-		float maxVNorm = normalIcon.getMaxV();
-		
-		IIcon riseIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 1);
-		
-		float minURise = riseIcon.getMinU();
-		float minVRise = riseIcon.getMinV();
-		float maxURise = riseIcon.getMaxU();
-		float maxVRise = riseIcon.getMaxV();
-		
-		IIcon fallIcon = RenderBlocks.getInstance()
-				.getBlockIconFromSideAndMetadata(block, 0, 2);
-		
-		float minUFall = fallIcon.getMinU();
-		float minVFall = fallIcon.getMinV();
-		float maxUFall = fallIcon.getMaxU();
-		float maxVFall = fallIcon.getMaxV();
+		float minU = ironIcon.getMinU();
+		float minV = ironIcon.getMinV();
+		float maxU = ironIcon.getMaxU();
+		float maxV = ironIcon.getMaxV();
 		
 		BlockSlope s = (BlockSlope) block;
 		
@@ -93,30 +77,30 @@ public class SlopeRenderer implements ISimpleBlockRenderingHandler {
 		int lightValue = block.getMixedBrightnessForBlock(world, x, y, z);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
 		//Bottom
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minUNorm, maxVNorm);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxUNorm, maxVNorm);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxUNorm, minVNorm);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minUNorm, minVNorm);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
 		//Back.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minUNorm, maxVNorm);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxUNorm, maxVNorm);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxUNorm, minVNorm);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minUNorm, minVNorm);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
 		//Side.
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxURise, minVRise);
-		t.addVertexWithUV(x + 1, y + 1, z + 1, minURise, minVRise);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minURise, maxVRise);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxURise, maxVRise);
+		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
 		//Side.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxURise, maxVRise);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minURise, maxVRise);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minURise, minVRise);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxURise, minVRise);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + .5, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
 		//Slant
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxUNorm, minVNorm);
-		t.addVertexWithUV(x + 0, y + 1, z + 0, maxUNorm, maxVNorm);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minUNorm, maxVNorm);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minUNorm, minVNorm);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, minV);
 	}
 	
 	public void renderEast(IBlockAccess world, int x, int y, int z,
