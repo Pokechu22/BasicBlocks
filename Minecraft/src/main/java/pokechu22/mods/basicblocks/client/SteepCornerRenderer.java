@@ -103,25 +103,25 @@ public class SteepCornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxV = icon.getMaxV();
 		
 		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + .5, minU, minV);
+		t.addVertexWithUV(x + .25, y + 0, z + .75, maxU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
 		//South
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + .5, z + .75, maxU, maxV);
 		//West
 		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .25, y + .5, z + 1, maxU, maxV);
 		//Top.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .25, y + 0, z + .75, maxU, maxV);
 		
 	}
 	
@@ -136,24 +136,24 @@ public class SteepCornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxV = icon.getMaxV();
 		
 		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .75, y + 0, z + .75, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		//South
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, minU, minV);
+		t.addVertexWithUV(x + 1, y + .5, z + .75, minU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
 		//East
 		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + .75, y + .5, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
 		//Top.
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, minU, minV);
+		t.addVertexWithUV(x + .75, y + 0, z + .75, minU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
 	}
 	
@@ -200,25 +200,25 @@ public class SteepCornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxV = icon.getMaxV();
 		
 		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + .5, y + 0, z + 0, minU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + .75, y + 0, z + .25, minU, maxV);
 		//North
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + .5, z + .25, maxU, maxV);
 		//East
 		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + .75, y + .5, z + 0, maxU, maxV);
 		//Top
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + .5, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + .75, y + 0, z + .25, maxU, maxV);
 	}
 	
 	public void renderLowerSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
