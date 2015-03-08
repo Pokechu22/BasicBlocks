@@ -236,22 +236,26 @@ public class SteepCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		//South
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, maxU, maxV);
-		//West
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, maxU, maxV);
-		//Top.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		//Side
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		//Side
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
-		
+		//Front
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, minU, minV);
+		//Top
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + .25, y + 1, z + .75, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
 	}
 	
 	public void renderLowerSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
@@ -343,21 +347,26 @@ public class SteepCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
 		t.addVertexWithUV(x + .5, y + 0, z + .5, minU, maxV);
-		//North
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
-		t.addVertexWithUV(x + 1, y + .5, z + .5, maxU, maxV);
-		//East
-		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 0, maxU, maxV);
-		//Top
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		//Side
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 0, maxU, minV);
 		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
+		//Side
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, minU, minV);
+		//Front
+		t.addVertexWithUV(x + 0.5, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, minU, maxV);
+		//Top
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + .75, y + 1, z + .25, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, minU, maxV);
 	}
 
 	@Override
