@@ -176,6 +176,46 @@ public class SteepInnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 
+		//Full side
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		//Full side		
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		//Bottom
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		//Top
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + .5, y + 1, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
+		
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		//Side
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		//Side
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		//Slope
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 0.5, maxU, maxV);
+		t.addVertexWithUV(x + .75, y + 1, z + .75, minU, maxV);
 	}
 	
 	public void renderLowerNorthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
