@@ -48,6 +48,15 @@ public class CommonProxy {
 		GameRegistry.registerBlock(BlockList.steepCornerNorthWestLower, "steepCornerNorthWestLower");
 		GameRegistry.registerBlock(BlockList.steepCornerSouthEastLower, "steepCornerSouthEastLower");
 		GameRegistry.registerBlock(BlockList.steepCornerSouthWestLower, "steepCornerSouthWestLower");
+		//Steep inner corners
+		GameRegistry.registerBlock(BlockList.steepInnerCornerNorthEastUpper, "steepInnerCornerNorthEastUpper");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerNorthWestUpper, "steepInnerCornerNorthWestUpper");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerSouthEastUpper, "steepInnerCornerSouthEastUpper");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerSouthWestUpper, "steepInnerCornerSouthWestUpper");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerNorthEastLower, "steepInnerCornerNorthEastLower");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerNorthWestLower, "steepInnerCornerNorthWestLower");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerSouthEastLower, "steepInnerCornerSouthEastLower");
+		GameRegistry.registerBlock(BlockList.steepInnerCornerSouthWestLower, "steepInnerCornerSouthWestLower");
 		//Shallow slopes
 		GameRegistry.registerBlock(BlockList.shallowSlopeNorthUpper, "shallowSlopeNorthUpper");
 		GameRegistry.registerBlock(BlockList.shallowSlopeEastUpper, "shallowSlopeEastUpper");

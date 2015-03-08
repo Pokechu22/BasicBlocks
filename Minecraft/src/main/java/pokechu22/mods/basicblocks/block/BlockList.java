@@ -142,6 +142,39 @@ public class BlockList {
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("steepCornerSouthWestLower").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
+	//Steep inner corners
+	public final static Block steepInnerCornerNorthEastUpper = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.UPPER_NORTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerNorthEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerNorthWestUpper = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.UPPER_NORTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerNorthWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerSouthEastUpper = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.UPPER_SOUTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerSouthEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerSouthWestUpper = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.UPPER_SOUTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerSouthWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerNorthEastLower = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.LOWER_NORTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerNorthEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerNorthWestLower = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.LOWER_NORTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerNorthWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerSouthEastLower = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.LOWER_SOUTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerSouthEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block steepInnerCornerSouthWestLower = new BlockSteepInnerCorner(Material.glass, BlockSteepInnerCorner.InnerCornerType.LOWER_SOUTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("steepInnerCornerSouthWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 
 	//Shallow slopes.
 	public final static Block shallowSlopeNorthUpper = new BlockShallowSlope(Material.glass, BlockShallowSlope.SlopeType.UPPER_NORTH)

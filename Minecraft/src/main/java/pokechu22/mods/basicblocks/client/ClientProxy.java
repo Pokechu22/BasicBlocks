@@ -15,6 +15,7 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerBlockHandler(new InnerCornerRenderer(RenderingRegistry.getNextAvailableRenderId()));
 		RenderingRegistry.registerBlockHandler(new SteepSlopeRenderer(RenderingRegistry.getNextAvailableRenderId()));
 		RenderingRegistry.registerBlockHandler(new SteepCornerRenderer(RenderingRegistry.getNextAvailableRenderId()));
+		RenderingRegistry.registerBlockHandler(new SteepInnerCornerRenderer(RenderingRegistry.getNextAvailableRenderId()));
 		RenderingRegistry.registerBlockHandler(new ShallowSlopeRenderer(RenderingRegistry.getNextAvailableRenderId()));
 	}
 
