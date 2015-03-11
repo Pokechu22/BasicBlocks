@@ -268,6 +268,46 @@ public class SteepInnerCornerRenderer implements ISimpleBlockRenderingHandler {
 		float maxU = icon.getMaxU();
 		float maxV = icon.getMaxV();
 		
+		//Bottom
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
+		//Full-side
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		//Full-side
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 0, minU, maxV);
+		//Side
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		//Side
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
+		//Front
+		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + .25, y + 1, z + .75, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, minU, minV);
+		//Top
+		t.addVertexWithUV(x + 1, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
+		t.addVertexWithUV(x + .5, y + 1, z + .5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, maxV);
+		
+		t.addVertexWithUV(x + 0, y + 1, z + 0.5, minU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
 	}
 
 	@Override
