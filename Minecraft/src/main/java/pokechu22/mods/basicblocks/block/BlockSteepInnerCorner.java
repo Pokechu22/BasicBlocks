@@ -10,26 +10,14 @@ import net.minecraft.block.material.Material;
 public class BlockSteepInnerCorner extends Block {
 
 	public static enum InnerCornerType {
-		UPPER_NORTH_EAST(.5,0,0,  1,1,.5),
-		UPPER_NORTH_WEST(0,0,0,   .5,1,.5),
-		UPPER_SOUTH_EAST(.5,0,.5, 1,1,1),
-		UPPER_SOUTH_WEST(0,0,.5,  .5,1,1),
-		LOWER_NORTH_EAST(0,0,0,   1,1,1),
-		LOWER_NORTH_WEST(0,0,0,   1,1,1),
-		LOWER_SOUTH_EAST(0,0,0,   1,1,1),
-		LOWER_SOUTH_WEST(0,0,0,   1,1,1);
-		
-		private InnerCornerType(double minX, double minY, double minZ, 
-				double maxX, double maxY, double maxZ) {
-			this.minX = minX;
-			this.minY = minY;
-			this.minZ = minZ;
-			this.maxX = maxX;
-			this.maxY = maxY;
-			this.maxZ = maxZ;
-		}
-
-		public final double minX, minY, minZ, maxX, maxY, maxZ;
+		UPPER_NORTH_EAST,
+		UPPER_NORTH_WEST,
+		UPPER_SOUTH_EAST,
+		UPPER_SOUTH_WEST,
+		LOWER_NORTH_EAST,
+		LOWER_NORTH_WEST,
+		LOWER_SOUTH_EAST,
+		LOWER_SOUTH_WEST
 	}
 	
 	public final InnerCornerType type;
@@ -37,13 +25,6 @@ public class BlockSteepInnerCorner extends Block {
 	public BlockSteepInnerCorner(Material material, InnerCornerType type) {
 		super(material);
 		this.type = type;
-		
-		this.minX = type.minX;
-		this.minY = type.minY;
-		this.minZ = type.minZ;
-		this.maxX = type.maxX;
-		this.maxY = type.maxY;
-		this.maxZ = type.maxZ;
 	}
 
 	@Override
