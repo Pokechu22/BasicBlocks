@@ -209,4 +209,21 @@ public class BlockList {
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("shallowSlopeWestLower").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
+	//"Triangle block"s.
+	public final static Block triangleNorthEast = new BlockTriangle(Material.glass, BlockTriangle.TriangleType.NORTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("triangleNorthEast").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block triangleNorthWest = new BlockTriangle(Material.glass, BlockTriangle.TriangleType.NORTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("triangleNorthWest").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block triangleSouthEast = new BlockTriangle(Material.glass, BlockTriangle.TriangleType.SOUTH_EAST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("triangleSouthEast").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block triangleSouthWest = new BlockTriangle(Material.glass, BlockTriangle.TriangleType.SOUTH_WEST)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("triangleSouthWest").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 }

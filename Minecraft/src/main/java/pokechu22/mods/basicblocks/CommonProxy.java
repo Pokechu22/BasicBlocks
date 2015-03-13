@@ -66,5 +66,10 @@ public class CommonProxy {
 		GameRegistry.registerBlock(BlockList.shallowSlopeEastLower, "shallowSlopeEastLower");
 		GameRegistry.registerBlock(BlockList.shallowSlopeSouthLower, "shallowSlopeSouthLower");
 		GameRegistry.registerBlock(BlockList.shallowSlopeWestLower, "shallowSlopeWestLower");
+		//Triangles
+		GameRegistry.registerBlock(BlockList.triangleNorthEast, "triangleNorthEast");
+		GameRegistry.registerBlock(BlockList.triangleNorthWest, "triangleNorthWest");
+		GameRegistry.registerBlock(BlockList.triangleSouthEast, "triangleSouthEast");
+		GameRegistry.registerBlock(BlockList.triangleSouthWest, "triangleSouthWest");
 	}
 }
