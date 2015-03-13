@@ -83,3 +83,10 @@ tile.shallowInnerCornerNorthEastUpper.name=Shallow Inner Corner (NorthEast, Uppe
 tile.shallowInnerCornerNorthWestUpper.name=Shallow Inner Corner (NorthWest, Upper)
 tile.shallowInnerCornerSouthEastUpper.name=Shallow Inner Corner (SouthEast, Upper)
 tile.shallowInnerCornerSouthWestUpper.name=Shallow Inner Corner (SouthWest, Upper)
+
+#Triangles
+
+tile.triangleNorthEast.name=Triangle (NorthEast)
+tile.triangleNorthWest.name=Triangle (NorthWest)
+tile.triangleSouthEast.name=Triangle (SouthEast)
+tile.triangleSouthWest.name=Triangle (SouthWest)
