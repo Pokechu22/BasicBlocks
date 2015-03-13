@@ -92,26 +92,30 @@ public class TriangleRenderer implements ISimpleBlockRenderingHandler {
 		float maxV = icon.getMaxV();
 		
 		//Bottom
-		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, minV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, maxV);
-		//South
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 0, z + 0.5, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
-		t.addVertexWithUV(x + 0, y + .5, z + .5, maxU, maxV);
-		//West
-		t.addVertexWithUV(x + 0, y + 1, z + 1, maxU, minV);
-		t.addVertexWithUV(x + 0, y + 0, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + .5, z + 1, maxU, maxV);
-		//Top.
-		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, minV);
+		//Top
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0.5, y + 1, z + 0.5, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 1, z + 0, maxU, minV);
 		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
-		t.addVertexWithUV(x + 1, y + 0, z + 1, minU, maxV);
-		t.addVertexWithUV(x + .5, y + 0, z + .5, maxU, maxV);
-		
+		//Full-side
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, minV);
+		//Full-side
+		t.addVertexWithUV(x + 0, y + 1, z + 1, minU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, minU, minV);
+		//Front
+		t.addVertexWithUV(x + 0, y + 1, z + 0, minU, minV);
+		t.addVertexWithUV(x + 1, y + 1, z + 1, maxU, minV);
+		t.addVertexWithUV(x + 1, y + 0, z + 1, maxU, maxV);
+		t.addVertexWithUV(x + 0, y + 0, z + 0, minU, maxV);
 	}
 	
 	public void renderSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
