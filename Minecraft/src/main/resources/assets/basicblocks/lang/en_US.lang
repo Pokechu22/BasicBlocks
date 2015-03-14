@@ -70,19 +70,14 @@ tile.shallowCornerNorthEastLower.name=Shallow Corner (NorthEast, Lower)
 tile.shallowCornerNorthWestLower.name=Shallow Corner (NorthWest, Lower)
 tile.shallowCornerSouthEastLower.name=Shallow Corner (SouthEast, Lower)
 tile.shallowCornerSouthWestLower.name=Shallow Corner (SouthWest, Lower)
+tile.shallowCornerNorthEastMiddle.name=Shallow Corner (NorthEast, Middle)
+tile.shallowCornerNorthWestMiddle.name=Shallow Corner (NorthWest, Middle)
+tile.shallowCornerSouthEastMiddle.name=Shallow Corner (SouthEast, Middle)
+tile.shallowCornerSouthWestMiddle.name=Shallow Corner (SouthWest, Middle)
 tile.shallowCornerNorthEastUpper.name=Shallow Corner (NorthEast, Upper)
 tile.shallowCornerNorthWestUpper.name=Shallow Corner (NorthWest, Upper)
 tile.shallowCornerSouthEastUpper.name=Shallow Corner (SouthEast, Upper)
 tile.shallowCornerSouthWestUpper.name=Shallow Corner (SouthWest, Upper)
-
-tile.shallowInnerCornerNorthEastLower.name=Shallow Inner Corner (NorthEast, Lower)
-tile.shallowInnerCornerNorthWestLower.name=Shallow Inner Corner (NorthWest, Lower)
-tile.shallowInnerCornerSouthEastLower.name=Shallow Inner Corner (SouthEast, Lower)
-tile.shallowInnerCornerSouthWestLower.name=Shallow Inner Corner (SouthWest, Lower)
-tile.shallowInnerCornerNorthEastUpper.name=Shallow Inner Corner (NorthEast, Upper)
-tile.shallowInnerCornerNorthWestUpper.name=Shallow Inner Corner (NorthWest, Upper)
-tile.shallowInnerCornerSouthEastUpper.name=Shallow Inner Corner (SouthEast, Upper)
-tile.shallowInnerCornerSouthWestUpper.name=Shallow Inner Corner (SouthWest, Upper)
 
 #Triangles
 
