@@ -9,18 +9,18 @@ import net.minecraft.block.material.Material;
 public class BlockShallowCorner extends Block {
 
 	public static enum ShallowCornerType {
-		NORTH_EAST_LOWER(0,0,0,1,.5,1),
-		NORTH_WEST_LOWER(0,0,0,1,.5,1),
-		SOUTH_EAST_LOWER(0,0,0,1,.5,1),
-		SOUTH_WEST_LOWER(0,0,0,1,.5,1),
-		NORTH_EAST_MIDDLE(0,0,0,1,1,1),
-		NORTH_WEST_MIDDLE(0,0,0,1,1,1),
-		SOUTH_EAST_MIDDLE(0,0,0,1,1,1),
-		SOUTH_WEST_MIDDLE(0,0,0,1,1,1),
-		NORTH_EAST_UPPER(0,0,0,1,1,1),
-		NORTH_WEST_UPPER(0,0,0,1,1,1),
-		SOUTH_EAST_UPPER(0,0,0,1,1,1),
-		SOUTH_WEST_UPPER(0,0,0,1,1,1);
+		LOWER_NORTH_EAST(0,0,0,1,.5,1),
+		LOWER_NORTH_WEST(0,0,0,1,.5,1),
+		LOWER_SOUTH_EAST(0,0,0,1,.5,1),
+		LOWER_SOUTH_WEST(0,0,0,1,.5,1),
+		MIDDLE_NORTH_EAST(0,0,0,1,1,1),
+		MIDDLE_NORTH_WEST(0,0,0,1,1,1),
+		MIDDLE_SOUTH_EAST(0,0,0,1,1,1),
+		MIDDLE_SOUTH_WEST(0,0,0,1,1,1),
+		UPPER_NORTH_EAST(0,0,0,1,1,1),
+		UPPER_NORTH_WEST(0,0,0,1,1,1),
+		UPPER_SOUTH_EAST(0,0,0,1,1,1),
+		UPPER_SOUTH_WEST(0,0,0,1,1,1);
 		
 		private ShallowCornerType(double minX, double minY, double minZ, double maxX,
 				double maxY, double maxZ) {
@@ -56,6 +56,6 @@ public class BlockShallowCorner extends Block {
 	
 	@Override
 	public String getItemIconName() {
-		return "basicblocks:inner_corner_" + this.type.name().toLowerCase(Locale.ENGLISH);
+		return "basicblocks:shallow_corner_" + this.type.name().toLowerCase(Locale.ENGLISH);
 	}
 }
