@@ -1,5 +1,6 @@
 package pokechu22.mods.basicblocks;
 
+import net.minecraft.block.material.Material;
 import pokechu22.mods.basicblocks.block.BlockList;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -71,5 +72,18 @@ public class CommonProxy {
 		GameRegistry.registerBlock(BlockList.triangleNorthWest, "triangleNorthWest");
 		GameRegistry.registerBlock(BlockList.triangleSouthEast, "triangleSouthEast");
 		GameRegistry.registerBlock(BlockList.triangleSouthWest, "triangleSouthWest");
+		//Shallow corners
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthEastLower, "shallowCornerNorthEastLower");
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthWestLower, "shallowCornerNorthWestLower");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthEastLower, "shallowCornerSouthEastLower");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthWestLower, "shallowCornerSouthWestLower");
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthEastMiddle, "shallowCornerNorthEastMiddle");
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthWestMiddle, "shallowCornerNorthWestMiddle");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthEastMiddle, "shallowCornerSouthEastMiddle");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthWestMiddle, "shallowCornerSouthWestMiddle");
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthEastUpper, "shallowCornerNorthEastUpper");
+		GameRegistry.registerBlock(BlockList.shallowCornerNorthWestUpper, "shallowCornerNorthWestUpper");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthEastUpper, "shallowCornerSouthEastUpper");
+		GameRegistry.registerBlock(BlockList.shallowCornerSouthWestUpper, "shallowCornerSouthWestUpper");
 	}
 }

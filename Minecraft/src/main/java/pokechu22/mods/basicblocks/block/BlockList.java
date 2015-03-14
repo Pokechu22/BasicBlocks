@@ -226,4 +226,53 @@ public class BlockList {
 			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
 			.setBlockName("triangleSouthWest").setBlockTextureName("basicblocks:BaseTexture")
 			.setLightLevel(1);
+	//Shallow corners
+	public final static Block shallowCornerNorthEastLower = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_EAST_LOWER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerNorthWestLower = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_WEST_LOWER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthEastLower = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_EAST_LOWER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthEastLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthWestLower = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_WEST_LOWER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthWestLower").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerNorthEastMiddle = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_EAST_MIDDLE)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthEastMiddle").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerNorthWestMiddle = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_WEST_MIDDLE)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthWestMiddle").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthEastMiddle = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_EAST_MIDDLE)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthEastMiddle").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthWestMiddle = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_WEST_MIDDLE)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthWestMiddle").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerNorthEastUpper = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_EAST_UPPER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerNorthWestUpper = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.NORTH_WEST_UPPER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerNorthWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthEastUpper = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_EAST_UPPER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthEastUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
+	public final static Block shallowCornerSouthWestUpper = new BlockShallowCorner(Material.glass, BlockShallowCorner.ShallowCornerType.SOUTH_WEST_UPPER)
+			.setHardness(1).setStepSound(Block.soundTypeMetal).setCreativeTab(tabBasicBlocks)
+			.setBlockName("shallowCornerSouthWestUpper").setBlockTextureName("basicblocks:BaseTexture")
+			.setLightLevel(1);
 }
