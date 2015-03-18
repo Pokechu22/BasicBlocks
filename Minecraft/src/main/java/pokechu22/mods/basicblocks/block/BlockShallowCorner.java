@@ -2,7 +2,7 @@ package pokechu22.mods.basicblocks.block;
 
 import java.util.Locale;
 
-import pokechu22.mods.basicblocks.client.InnerCornerRenderer;
+import pokechu22.mods.basicblocks.client.ShallowCornerRenderer;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -51,7 +51,7 @@ public class BlockShallowCorner extends Block {
 
 	@Override
 	public int getRenderType() {
-		return InnerCornerRenderer.usedRenderId;
+		return ShallowCornerRenderer.usedRenderId;
 	}
 	
 	@Override
