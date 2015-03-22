@@ -41,11 +41,6 @@ public class ShallowCornerRenderer implements ISimpleBlockRenderingHandler {
 		IIcon icon = RenderBlocks.getInstance()
 				.getBlockIconFromSideAndMetadata(block, 0, 0);
 		
-		float minU = icon.getMinU();
-		float minV = icon.getMinV();
-		float maxU = icon.getMaxU();
-		float maxV = icon.getMaxV();
-		
 		BlockShallowCorner corner = (BlockShallowCorner) block;
 		
 		Tessellator t = Tessellator.instance;
@@ -54,15 +49,191 @@ public class ShallowCornerRenderer implements ISimpleBlockRenderingHandler {
 		t.setBrightness(lightValue);
 		t.setColorOpaque_F(1.0F, 1.0F, 1.0F);
 		
+		switch(corner.type) {
+		case LOWER_NORTH_EAST:
+			renderLowerNorthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case LOWER_NORTH_WEST:
+			renderLowerNorthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case LOWER_SOUTH_EAST:
+			renderLowerSouthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case LOWER_SOUTH_WEST:
+			renderLowerSouthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case MIDDLE_NORTH_EAST:
+			renderMiddleNorthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case MIDDLE_NORTH_WEST:
+			renderMiddleNorthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case MIDDLE_SOUTH_EAST:
+			renderMiddleSouthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case MIDDLE_SOUTH_WEST:
+			renderMiddleSouthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case UPPER_NORTH_EAST:
+			renderUpperNorthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case UPPER_NORTH_WEST:
+			renderUpperNorthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case UPPER_SOUTH_EAST:
+			renderUpperSouthEast(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		case UPPER_SOUTH_WEST:
+			renderUpperSouthWest(t, world, x, y, z, corner, modelId, renderer);
+			break;
+		}
+		
 		return false;
 	}
 	
-	/*
-	 * South: Z increasing
-	 * East: X increasing.
-	 * North: Z decreasing
-	 * West: X decreasing 
-	 */
+	public void renderUpperNorthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderUpperNorthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderUpperSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderUpperSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderMiddleNorthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderMiddleNorthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderMiddleSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderMiddleSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderLowerNorthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderLowerNorthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderLowerSouthEast(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
+	
+	public void renderLowerSouthWest(Tessellator t, IBlockAccess world, int x, int y, int z,
+			BlockShallowCorner block, int modelId, RenderBlocks renderer) {
+		IIcon icon = RenderBlocks.getInstance()
+				.getBlockIconFromSideAndMetadata(block, 0, 0);
+	
+		float minU = icon.getMinU();
+		float minV = icon.getMinV();
+		float maxU = icon.getMaxU();
+		float maxV = icon.getMaxV();
+		
+	}
 
 	@Override
 	public boolean shouldRender3DInInventory(int modelId) {
